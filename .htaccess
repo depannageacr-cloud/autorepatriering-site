@@ -6,11 +6,19 @@ RewriteEngine On
 RewriteRule ^\.git(?:/|$) - [F,L]
 RewriteRule ^_source(?:/|$) - [F,L]
 RewriteRule ^\.well-known/acme-challenge/ - [L]
+RewriteCond %{HTTP_HOST} ^ovh-test\.autorepatriering\.be$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://ovh-test.autorepatriering.be%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{HTTP_HOST} !^ovh-test\.autorepatriering\.be$ [NC]
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\.autorepatriering\.be$ [NC]
 RewriteRule ^ https://www.autorepatriering.be%{REQUEST_URI} [R=301,L,NE]
 </IfModule>
+<IfModule mod_setenvif.c>
+SetEnvIf Host "^ovh-test\.autorepatriering\.be$" REPAT_STAGING
+</IfModule>
 <IfModule mod_headers.c>
+Header always set X-Robots-Tag "noindex, nofollow" env=REPAT_STAGING
 Header always set X-Content-Type-Options "nosniff"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header always set X-Frame-Options "SAMEORIGIN"
