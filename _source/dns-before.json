@@ -1,0 +1,31 @@
+{
+  "domain": "autorepatriering.be",
+  "captured": "2026-11-14",
+  "registrar": "Combell",
+  "nameservers": [
+    "ns1.combell.eu",
+    "ns3.combell.net",
+    "ns4.combell.net"
+  ],
+  "webRecordsBefore": [
+    {
+      "type": "A",
+      "name": "@",
+      "target": "3.125.172.46",
+      "ttl": 3600
+    },
+    {
+      "type": "A",
+      "name": "@",
+      "target": "3.73.27.108",
+      "ttl": 3600
+    },
+    {
+      "type": "CNAME",
+      "name": "www",
+      "target": "2ec9c8c348264a8f8905271bad877bed.webbuilder-online.com",
+      "ttl": 3600
+    }
+  ],
+  "scope": "Only web A records and www CNAME may change. Keep mail records and nameservers."
+}
