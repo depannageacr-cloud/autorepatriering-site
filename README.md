@@ -1,9 +1,9 @@
 # Autorepatriering.be
 
-Bestaande homepage en vier landenpagina’s, zelfstandig op OVH.
+45 publieke pagina’s: homepage, vier bestaande landenpagina’s en veertig extra pagina’s over voertuigtransport, repatriëring, pech, voertuigen en praktische vragen.
 
-Het formulier op de homepage verzendt via PHP naar depannageacr@hotmail.com. Prijs en planning worden persoonlijk bevestigd. Mailserveracceptatie is geen garantie voor inboxplaatsing.
+De actuele publicatie bestaat uit de gegenereerde HTML/PHP, publieke CSS/JavaScript en geoptimaliseerde beelden. Het formulier gebruikt de bestaande serverafhandeling; de nieuwe code geeft de laadplaats en bestemming aan die afhandeling door.
 
-Bronnen van de bestaande gepubliceerde website en de bouwcode staan onder `_source/`. Opnieuw opbouwen: `python _source/build.py`. De map is via Apache geblokkeerd.
+De volledige actuele bouwbronnen, het onderzoek en de zoekwoordindeling worden privé bewaard en worden niet opnieuw in deze publieke repository gepubliceerd. Gebruik het oude _source/build.py niet om deze uitbreiding te overschrijven.
 
-Domein en mail blijven bij Combell; alleen webrecords worden naar OVH gewijzigd.
+Domeinregistratie en e-mail blijven bij Combell; de websitehosting is OVH. De migratiestatus moet op de live website worden gecontroleerd.
